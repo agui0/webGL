@@ -4,7 +4,6 @@ var VSHADER_SOURCE =
   'attribute vec4 a_Position;\n' +
   'void main() {\n' +
   ' gl_Position = a_Position;\n' +
-  ' gl_PointSize = 10.0;\n' +
   '}\n';
 
 // 片元着色器
@@ -44,7 +43,7 @@ function main() {
   gl.clear(gl.COLOR_BUFFER_BIT);
 
   // 绘制三个点
-  gl.drawArrays(gl.POINTS, 0, n); // n is 3
+  gl.drawArrays(gl.TRIANGLES, 0, n); // n is 3
 }
 
 function initVertexBuffers(gl) {
